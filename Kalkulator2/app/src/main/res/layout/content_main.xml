@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.app.hokagelab.kalkulator2.MainActivity">
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/editAngka1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editAngka2"
+        android:layout_below="@+id/editAngka2"
+        android:ems="10"
+        android:hint="Masukkan Angka Kedua"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <EditText
+        android:id="@+id/editAngka2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Masukkan Angka Pertama"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnTambah"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_alignStart="@+id/editAngka1"
+        android:layout_below="@+id/editAngka1"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/btnKurang"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/editAngka1"
+        android:layout_toEndOf="@+id/btnTambah"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/btnKali"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/editAngka1"
+        android:layout_toEndOf="@+id/btnKurang"
+        android:text="x" />
+
+    <Button
+        android:id="@+id/btnBagi"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/editAngka1"
+        android:layout_toEndOf="@+id/btnKali"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/btnHapus"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/editAngka1"
+        android:layout_toEndOf="@+id/btnBagi"
+        android:text="c" />
+
+    <TextView
+        android:id="@+id/textHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnKali"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/btnKurang"
+        android:text="0.0"
+        android:textSize="30dp" />
+
+</RelativeLayout>
